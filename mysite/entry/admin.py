@@ -3,7 +3,7 @@ from .models import Note
 
 
 class NoteAdmin(admin.ModelAdmin):
-    list_display = ['name', 'text']
+    list_display = ['name', 'text', 'category']
     search_fields = ['name']
 
 

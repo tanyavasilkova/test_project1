@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{object.name}}</br>
+
+{% for object in category.note_set.all %}
+<a href="{% url 'note_detail_view' object.pk %}">{{object.name}}</a> </br>
+{% endfor %}
+
+<a href="{% url 'category_update_view' object.pk %}"> Изменить</a></br>
+<a href="{% url 'note_create_view' %}">создать заметку  </a></br>
+<a href="{% url 'category_list_view' %}"> к списку категорий </a>
+
+</body>
+</html>

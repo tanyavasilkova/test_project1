@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     'main',
     'entry',
     'categories',
+
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -71,7 +74,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
-
+SIGNING_BACKEND = 'django_cryptography.core.signing.TimestampSigner'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases

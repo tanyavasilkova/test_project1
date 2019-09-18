@@ -7,6 +7,7 @@ class NoteCreateForm(ModelForm):
     class Meta:
         model = Note
         fields = ('name', 'text', 'category')
+        #text = forms.CharField
 
 
 

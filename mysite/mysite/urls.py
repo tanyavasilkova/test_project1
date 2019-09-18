@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from entry.views import NoteList, NoteDetail, NoteCreate
 from categories.views import CategoryList, CategoryDetail, CategoryCreate, CategoryUpdate
-
+#from entry import views
 
 
 urlpatterns = [
@@ -26,11 +26,14 @@ urlpatterns = [
     path('note/', NoteList.as_view(), name='note_list_view'),
     path('note/<int:pk>/', NoteDetail.as_view(), name='note_detail_view'),
     path('note/create', NoteCreate.as_view(), name='note_create_view'),
+    #path('note/encrypt', NoteCreate., name='note_enc_view'),
 
     path('category/', CategoryList.as_view(), name='category_list_view'),
     path('category/<int:pk>/', CategoryDetail.as_view(), name='category_detail_view'),
     path('category/create/', CategoryCreate.as_view(), name='category_create_view'),
     path('category/update/<int:pk>', CategoryUpdate.as_view(), name='category_update_view'),
+    #path('category/test', views.test, name='test_view'),
+
 
 
 

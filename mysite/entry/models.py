@@ -1,6 +1,6 @@
 from django.db import models
 from django.urls import reverse_lazy
-
+#from django_cryptography.fields import encrypt
 
 
 class Note(models.Model):
@@ -17,6 +17,8 @@ class Note(models.Model):
     class Meta:
         verbose_name = "Заметка"
         verbose_name_plural = "Заметки"
+
+
 
 
 
